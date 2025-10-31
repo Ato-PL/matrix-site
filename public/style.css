@@ -1,0 +1,19 @@
+/* Minimalny, czysty styl */
+html,body {
+  height: 100%;
+  margin: 0;
+  background: #000; /* czarne tło */
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Opcjonalnie: centrowanie tekstu gdy JS nie działa */
+body::after {
+  content: "";
+  display: none;
+}
