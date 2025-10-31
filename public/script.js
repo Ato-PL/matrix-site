@@ -69,4 +69,7 @@ btn.addEventListener('click', () => {
     document.exitFullscreen();
   }
 });
+document.addEventListener('fullscreenchange', () => {
+  btn.style.display = document.fullscreenElement ? 'none' : 'block';
+});
 
