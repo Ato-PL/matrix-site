@@ -57,3 +57,16 @@ function draw() {
 // (prosty sposób: co kilka klatek narysować biały znak na głowie spadu) — pomijam by kod był prosty.
 
 draw();
+// --- FULLSCREEN HANDLER ---
+const btn = document.getElementById('fullscreen-btn');
+
+btn.addEventListener('click', () => {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen().catch(err => {
+      console.warn(`Fullscreen error: ${err.message}`);
+    });
+  } else {
+    document.exitFullscreen();
+  }
+});
+
